@@ -1,0 +1,12 @@
+{
+  "name": "es6-demo",
+  "version": "1.0.0",
+  "description": "ES6 Demos",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0"
+  }
+}
