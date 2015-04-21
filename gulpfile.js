@@ -5,8 +5,14 @@ var gulp = require('gulp');
 var babel = require('gulp-babel');
 var chalk = require('chalk');
 
+gulp.task('dirs', function () {
+    return gulp.src('08.*/*.js')
+        .pipe(babel())
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('default', function () {
-    gulp.watch('*.js', function (e) {
+    gulp.watch('*.*.*.js', function (e) {
         if (e.type === 'deleted') {
             return;
         }
