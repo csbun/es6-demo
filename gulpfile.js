@@ -6,13 +6,13 @@ var babel = require('gulp-babel');
 var chalk = require('chalk');
 
 gulp.task('dirs', function () {
-    return gulp.src('08.*/*.js')
+    return gulp.src('es6/08.*/*.js')
         .pipe(babel())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', function () {
-    gulp.watch('*.*.*.js', function (e) {
+    gulp.watch('es6/*.js', function (e) {
         if (e.type === 'deleted') {
             return;
         }
@@ -20,7 +20,7 @@ gulp.task('default', function () {
             .pipe(babel())
             .pipe(gulp.dest('dist'));
 
-        var changedFile = path.relative(__dirname, e.path);
+        var changedFile = path.basename(e.path);
         console.log(chalk.magenta('[' + e.type + '] ' + changedFile));
 
         childProcess.fork('dist/' + changedFile);
