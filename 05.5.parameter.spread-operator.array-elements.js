@@ -15,6 +15,7 @@ console.log(axyz);
 /**
  * Convert iterable objects to arrays
  * *** TODO: NOT WORK VIA BABEL ***
+ * *** see 11.1.set.js ***
  */
 // let set = new Set(z);
 // let arr = [...set];
